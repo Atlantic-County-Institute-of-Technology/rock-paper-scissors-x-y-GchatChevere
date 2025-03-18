@@ -11,27 +11,45 @@
     width: 565px;
     border: 1px solid black;
     justify-content: center;
-    background-color: bisque;
     align-items: center;
 }
 
-.Rock{
-    
+body{
+    background-color: #606060;
 }
 
 
 button{
     height: 50px;
-    margin: 5px;
+    margin: 15px;
+    border-radius: 50%;
 padding: 1px;
 width: 100px;
 }
 
 .buttons{
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid #6194BC;
+    background-color: #D0EAFF;
     justify-content: center;
-    height: 100px;
-    width: 350px;
-    text-align: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.placeHolder1{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    height: 150px;
+    width: 200px;
+    background-color: #ECECEC;
+    border-radius: 50%;
+}
+.placeHolder2{
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    height: 150px;
+    width: 200px;
+    background-color: #ECECEC;
+    border-radius: 50%;
 }
