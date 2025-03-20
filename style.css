@@ -1,6 +1,6 @@
 * {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -28,6 +28,19 @@ body{
     width: fit-content;
 }
 
+.NewGame{
+    border-radius: 0%;
+    position:relative;
+    top: 100px;
+    height: 1   00px;
+    width: 200px;
+    border: 1px solid #6194BC;
+    background-color: #D0EAFF;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+}
+
 button{
     width: 200px;
     height: 100px;
@@ -37,20 +50,47 @@ button{
     flex-direction: column;
 }
 
+img{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.stone{
+    position: absolute;
+    top: 10px;
+    left:65px;
+}
+
+.Paper{
+    position: absolute;
+    left: 300px;
+    top: 15px;
+}
+
+.Scissors{
+    position: absolute;
+    rotate:90deg;
+    top: 16px;
+    right: 530px;
+}
+
+.Micro{
+    position: absolute;
+    top: 13px;
+    right: 300px;
+}
+
+.Pencil{
+position: absolute;
+rotate: 50deg;
+top: 13px;
+right: 70px;
+}
 
 .Players1{
     position: absolute;
-    left: 100px;
-    top: 100px;
-    height: 150px;
-    width: 200px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 50%;
-}
-.Players2{
-    position: absolute;
-    right: 100px;
+    left: 400px;
     top: 100px;
     height: 150px;
     width: 200px;
@@ -59,10 +99,56 @@ button{
     border-radius: 50%;
 }
 
-.placeHolder2{
+.player1{
+    position: absolute;
+    top: -50px;
+    left: 70px;
+}
+
+.Players2{
+    position: absolute;
+    right: 400px;
+    top: 100px;
+    height: 150px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.player2{
+    position: absolute;
+    top: -50px;
+    right: 30px;
+}
+
+.winner{
+    position: absolute;
+    right: 805px;
+    top: 5px;
+    height: 250px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.Games{
+    position:absolute;
+    top: 340px;
+    right: 846px;
+    height: 100px;
+    width: 220px;
+    border-radius: 50%;
+    background-color: #D0EAFF;
+    border: 1px solid black;
+}
+
+
+.playerscore2{
     position:absolute;
     top: 280px;
-    left: 1625px;
+    right: 425px;
     height: 100px;
     width: 150px;
     border-radius: 50%;
@@ -70,10 +156,10 @@ button{
     border: 1px solid black;
 }
 
-.placeHolder1{
+.playerscore1{
     position:absolute;
     top: 280px;
-    left: 125px;
+    left: 425px;
     height: 100px;
     width: 150px;
     border-radius: 50%;
