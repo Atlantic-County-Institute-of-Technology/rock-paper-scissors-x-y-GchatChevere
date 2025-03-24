@@ -4,8 +4,38 @@
 }
 
 body{
-    background-color: lightblue;
+    background: linear-gradient(#00030a, #2e39a8);;
 }
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(32, 32, 32) 50%, rgb(241, 241, 241) 50%);
+    bottom:0;
+    left:-70%;
+    opacity:.1;
+    position:fixed;
+    right:-90%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+    
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
 
 .Container{
     margin: 0 auto;
@@ -18,38 +48,54 @@ body{
     align-items: center;
 }
 
-
-.buttons{
-    position:relative;
-    top: 100px;
-    border: 1px solid #6194BC;
-    background-color: #D0EAFF;
-    justify-content: center;
-    height: fit-content;
-    width: fit-content;
+.title{
+position: absolute;
+top: 0px;
+font-style: oblique;
+font-variant: small-caps;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
+
 .NewGame{
+    right: 540px;
     border-radius: 0%;
     position:relative;
     top: 100px;
     height: 1   00px;
     width: 200px;
-    border: 1px solid #6194BC;
-    background-color: #D0EAFF;
+    border: 1px solid #000000;
+    background-color: #348ce4;
     justify-content: center;
     height: fit-content;
     width: fit-content;
+    margin-top: 30px;
+}
+
+.buttons{
+    position:relative;
+    top: 160px;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    left: 35px;
 }
 
 button{
-    width: 200px;
-    height: 100px;
-    margin: 15px;
-    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    margin-left: 50px;
+    border-radius: 25%;
     padding: 1px;
     flex-direction: column;
     box-shadow: 5px 5px 10px 2px;
+    transition: background-color 0.5s;
+}
+
+button:hover{
+    background:linear-gradient(#ca270a, rgb(75, 60, 60)) ;
 }
 
 .nonbuttons{
@@ -71,28 +117,28 @@ img{
 
 .Paper{
     position: absolute;
-    left: 300px;
+    left: 265px;
     top: 15px;
 }
 
 .Scissors{
     position: absolute;
     rotate:90deg;
-    top: 16px;
-    right: 530px;
+    top: 20px;
+    right: 534px;
 }
 
 .Micro{
     position: absolute;
-    top: 13px;
-    right: 300px;
+    top: 15px;
+    right: 345px;
 }
 
 .Pencil{
 position: absolute;
 rotate: 50deg;
-top: 13px;
-right: 70px;
+top: 20px;
+right: 145px;
 }
 
 .Players1{
@@ -108,9 +154,8 @@ right: 70px;
 
 .player1{
     position: absolute;
-    top: -50px;
-    left: 70px;
-    font-family:Copperplate, Papyrus, fantasy;
+    top: 60px;
+    left: 30px;
 }
 
 .Players2{
@@ -126,27 +171,25 @@ right: 70px;
 
 .player2{
     position: absolute;
-    top: -50px;
-    right: 30px;
-    font-family:Copperplate, Papyrus, fantasy;
+    top: 60px;
+    right: 80px;
 }
 
 .Winner{
     position: absolute;
     right: 805px;
-    top: 40px;
+    top: 70px;
     height: 250px;
     width: 300px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 1px solid black;
     border-radius: 50%;
 }
 
 .winner{
     position: relative;
-    top: -40px;
+    top: 110px;
     left: 90px;
-    font-family:Copperplate, Papyrus, fantasy;
 }
 
 .Games{
@@ -156,15 +199,14 @@ right: 70px;
     height: 100px;
     width: 220px;
     border-radius: 50%;
-    background-color: #D0EAFF;
+    background-color: #fafafa;
     border: 1px solid black;
 }
 
 .games{
     position: relative;
     left: 65px;
-    top: -50px;
-    font-family:Copperplate, Papyrus, fantasy;
+    top: 25px;
 }
 
 
@@ -175,15 +217,14 @@ right: 70px;
     height: 100px;
     width: 150px;
     border-radius: 50%;
-    background-color: #D0EAFF;
+    background-color: #f7f7f7;
     border: 1px solid black;
 }
 
 .score2{
     position: relative;
-    top: -38px;
-    left: 46px;
-    font-family:Copperplate, Papyrus, fantasy;
+    top: 35px;
+    left: 25px;
 }
 
 
@@ -194,13 +235,12 @@ right: 70px;
     height: 100px;
     width: 150px;
     border-radius: 50%;
-    background-color: #D0EAFF;
+    background-color: #ffffff;
     border: 1px solid black;
 }
 
 .score1{
     position: relative;
-    font-family:Copperplate, Papyrus, fantasy;
-    top: -40px;
-    left: 45px;
+    top: 35px;
+    left: 25px;
 }

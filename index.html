@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="Container">
-        <div class="buttons"><!-- Office Items-->
 
+        <H1 class="title"> Rock, Paper, Scissors GO!</H1>
+
+        <div class="buttons"><!-- Office Items/buttons-->
+            
             <button class="Rock" id="Rock"><img src="assets/download__1_-removebg-preview.png" alt="Rock" class="stone"></button> 
             <button class="paper" id="paper"><img src="assets/download__3_-removebg-preview.png" alt="Paper"  class="Paper"></button> 
             <button class="scissors" id="scissors"><img src="assets/OIP__2_-removebg-preview.png" alt="Scissors" class="Scissors"> </button>    
@@ -18,22 +20,25 @@
             <button class="microwave" id="microwave"><img src="assets/OIP__1_-removebg-preview.png" alt="microwave" class="Micro"></button>  
             <!--pencil beats scissors paper-->
             <button class="pencil" id="pencil"> <img src="assets/OIP-removebg-preview.png" alt="Pencil" class="Pencil"></button> 
+            <button class="NewGame">New Game</button>
+            
+    </div><!-- Office Items/buttons-->
 
-    </div><!-- Office Items-->
-
-            <div class="scores"><!--Player score-->
-                <div class="Winner" id="winner"><h1 class="winner">Winner</h1></div>
-                <div class="playerscore1"><h1 class="score1">wins</h1></div>
-                <div class="playerscore2"><h1 class="score2">wins</h1></div>
-                <div class="Games"><h1 class="games">games</h1></div>
-            </div><!--Player score-->
-
-              <button class="NewGame">New Game</button>
-        
-                    <div class="results"><!--Player Choices-->
-                        <div class="Players1" id="P1"><h1 class="player1">You!</h1></div>
-                        <div class="Players2" id="P2"><h1 class="player2">Computer</h1></div>
-                    </div><!--Player Choices-->
+            <div class="displays"><!--displays-->
+                <div class="Winner" id="winner"><h1 class="winner">Winner:</h1></div>
+                <div class="Players1" id="P1"><h2 class="player1">You:</h2></div>
+                <div class="Players2" id="P2"><h2 class="player2">Computer:</h2></div>
+                <div class="playerscore1"><h2 class="score1">wins:</h2></div>
+                <div class="playerscore2"><h2 class="score2">wins:</h2></div>
+                <div class="Games"><h2 class="games">games</h2></div>
+            </div><!--displays-->
+            
+            <div class="Background">
+                <div class="bg"></div>
+                <div class="bg bg2"></div>
+                <div class="bg bg3"></div>
+            </div>
+                    
 
 
     </div>
