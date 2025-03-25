@@ -72,7 +72,7 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     margin-top: 30px;
 }
 
-.buttons{
+.choices{
     position:relative;
     top: 160px;
     justify-content: center;
@@ -152,7 +152,7 @@ right: 145px;
     border-radius: 50%;
 }
 
-.player1{
+.P1{
     position: absolute;
     top: 60px;
     left: 30px;
@@ -169,7 +169,7 @@ right: 145px;
     border-radius: 50%;
 }
 
-.player2{
+.P2{
     position: absolute;
     top: 60px;
     right: 80px;
@@ -186,10 +186,10 @@ right: 145px;
     border-radius: 50%;
 }
 
-.winner{
-    position: relative;
-    top: 110px;
-    left: 90px;
+#winner{
+    position: absolute;
+    top: 100px;
+    left: 790px;
 }
 
 .Games{

@@ -3,11 +3,12 @@ const Paper = document.getElementById("paper");
 const Scissors = document.getElementById("scissors");
 const Microwave = document.getElementById("microwave");
 const Pencil = document.getElementById("pencil");
-const computerdisplay = document.getElementById("P1");
-const playerDisplay = document.getElementById("P2");
+const choices = ["rock","paper","scissors","microwave","pencil"]
+const playerDisplay = document.getElementById("P1");
+const cpuDisplay = document.getElementById("P2");
 const result = document.getElementById("winner");
-let playerPick = 0;
-let cpuPick = 0;
+let playerChoice = 0;
+let cpuChoice = 0;
 
 
 // TODO: EventListeners for player choice
@@ -30,15 +31,43 @@ Pencil.addEventListener("click", () => {
     Playgame(5);
 });
 
-function Playgame(playerPick) {
-    
+function Playgame(playerChoice) {
+    const cpuChoice = choices[Math.floor(Math.random() * 5 )]
+    if (playerChoice === cpuChoice){
+        result = "ITS A TIE";
+    }
+    else{
+        switch(playerChoice){
+            case "Rock":
+                (cpuChoice === "Scissors") ? "You win!" : "You Lose"
+                break;
+            case "Paper":
+                (cpuChoice === "Rock") ? "You win!" : "You Lose"
+                break;
+            case "Scissors":
+                (cpuChoice === "Paper") ? "You win!" : "You Lose"
+                break;
+            
+        }
+    }
+
+
+
+    playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+    cpuDisplay.textContent = `COMPUTER: ${cpuChoice}`;
+    result.textContent = result;
+
+
+
+
 }
 
 
 
-function cpuChoice() {
+/*function cpuChoice() {
     return Math.floor(Math.random() * 5)
-}
+}*/
+
 
 
 
