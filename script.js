@@ -1,63 +1,57 @@
-const Rock = document.getElementById("Rock");
-const Paper = document.getElementById("paper");
-const Scissors = document.getElementById("scissors");
-const Microwave = document.getElementById("microwave");
-const Pencil = document.getElementById("pencil");
-const choices = ["rock","paper","scissors","microwave","pencil"]
+const choices = ["rock","paper","scissors","printer","pencil"]
 const playerDisplay = document.getElementById("P1");
-const cpuDisplay = document.getElementById("P2");
-const result = document.getElementById("winner");
-let playerChoice = 0;
-let cpuChoice = 0;
-
-
+const computerDisplay = document.getElementById("P2");
+const resultDisplay = document.getElementById("winner");
 // TODO: EventListeners for player choice
 // TODO: Function for cpu choice
 
 
-Rock.addEventListener("click", () => {
-    Playgame(1);
-});
-Paper.addEventListener("click", () => {
-    Playgame(2);
-});
-Scissors.addEventListener("click", () => {
-    Playgame(3);
-});
-Microwave.addEventListener("click", () => {
-    Playgame(4);
-});
-Pencil.addEventListener("click", () => {
-    Playgame(5);
-});
 
-function Playgame(playerChoice) {
+function playgame(playerChoice) {
     const cpuChoice = choices[Math.floor(Math.random() * 5 )]
+    let result = "";
+
     if (playerChoice === cpuChoice){
         result = "ITS A TIE";
     }
     else{
         switch(playerChoice){
-            case "Rock":
-                (cpuChoice === "Scissors") ? "You win!" : "You Lose"
+            case "rock":
+               result = (cpuChoice === "scissors") ? "You win!" : "You Lose!"
                 break;
-            case "Paper":
-                (cpuChoice === "Rock") ? "You win!" : "You Lose"
+            case "paper":
+               result = (cpuChoice === "rock") ? "You win!" : "You Lose!"
                 break;
-            case "Scissors":
-                (cpuChoice === "Paper") ? "You win!" : "You Lose"
+            case "scissors":
+                result = (cpuChoice === "paper") ? "You win!" : "You Lose!"
                 break;
-            
+            case "printer":
+                result = (cpuChoice === "paper"|| cpuChoice === "pencil") ? "You win!" : "You Lose!"
+                break;
+            case "pencil":
+                result = (cpuChoice === "paper"|| cpuChoice === "scissors") ? "You win!" : "You Lose!"
+                break;
+
         }
     }
 
 
 
     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
-    cpuDisplay.textContent = `COMPUTER: ${cpuChoice}`;
-    result.textContent = result;
+    computerDisplay.textContent = `computer: ${cpuChoice}`;
+    resultDisplay.textContent = result;
 
+    resultDisplay.classList.remove("greentext","redText")
 
+    switch(result){
+        case "You Win!":
+            resultDisplay.classList.add("greenText");
+            break;
+            
+        case "You Lose!":
+            resultDisplay.classList.add("redText");
+            break;
+    }
 
 
 }
