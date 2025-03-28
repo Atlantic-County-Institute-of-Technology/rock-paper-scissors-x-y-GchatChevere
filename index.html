@@ -20,17 +20,20 @@
             <button onclick ="playgame('printer')" class="printer" id="printer"><img src="assets/download__3_-removebg-preview.png" alt="Printer" class="Print"></button>  
             <!--pencil beats scissors paper-->
             <button onclick ="playgame('pencil')" class="pencil" id="pencil"> <img src="assets/OIP-removebg-preview.png" alt="Pencil" class="Pencil"></button> 
-            <button class="NewGame">New Game</button>
-            
+            <button id ="NewGame" class="NewGame">New Game</button>
     </div><!-- Office Items/buttons-->
 
             <div class="displays"><!--displays-->
                 <div class="Winner" id="winner"></div>
                 <div class="Players1" id="P1"></div>
                 <div class="Players2" id="P2"></h2></div>
-                <div class="playerscore1"></div>
-                <div class="playerscore2"></div>
-                <div class="Games">games</div>
+                <div class="scoreDisplay1">Player Score:
+                    <Span id="playerScoreDisplay">0</Span>
+                </div>
+                <div class="scoreDisplay2">Computer Score:
+                    <Span id="computerScoreDisplay">0</Span>
+                </div>
+                <div class="Games"></div>
             </div><!--displays-->
             
             <div class="Background">
@@ -40,6 +43,9 @@
             </div>
                     
 
+            <h1 class="player">Player</h1>
+            <h1 class="cpu">Computer</h1>
+            <h1 class="winner">Winner</h1>
 
     </div>
 

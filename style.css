@@ -1,10 +1,13 @@
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body{
-    background: linear-gradient(#00030a, #2e39a8);;
+    background: linear-gradient(#00030a, #2e39a8);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
 }
 
 .bg {
@@ -17,26 +20,26 @@ body{
     right:-90%;
     top:0;
     z-index:-1;
-  }
+}
   
   .bg2 {
     animation-direction:alternate-reverse;
     animation-duration:4s;
-  }
-  
-  .bg3 {
+}
+
+.bg3 {
     animation-duration:5s;
-  }
-    
-  @keyframes slide {
+}
+
+@keyframes slide {
     0% {
-      transform:translateX(-25%);
+        transform:translateX(-25%);
     }
     100% {
-      transform:translateX(25%);
+        transform:translateX(25%);
     }
   }
-
+  
 .Container{
     margin: 0 auto;
     display: flex;
@@ -136,9 +139,9 @@ img{
 }
 
 .Pencil{
-position: absolute;
-rotate: 50deg;
-top: 20px;
+    position: absolute;
+    rotate: 50deg;
+    top: 20px;
 right: 145px;
 }
 
@@ -186,27 +189,13 @@ right: 145px;
     border-radius: 50%;
 }
 
-.Games{
-    position:absolute;
-    top: 370px;
-    right: 846px;
-    height: 100px;
-    width: 220px;
-    border-radius: 50%;
-    background-color: #fafafa;
-    border: 1px solid black;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.playerscore2{
+.scoreDisplay2{
     position:absolute;
     top: 280px;
     right: 425px;
-    height: 100px;
+    height: 150px;
     width: 150px;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: #f7f7f7;
     border: 1px solid black;
     align-items: center;
@@ -215,13 +204,13 @@ right: 145px;
 }
 
 
-.playerscore1{
+.scoreDisplay1{
     position:absolute;
     top: 280px;
     left: 425px;
-    height: 100px;
+    height: 150px;
     width: 150px;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: #ffffff;
     border: 1px solid black;
     align-items: center;
@@ -229,10 +218,37 @@ right: 145px;
     display: flex;
 }
 
-.greenText{
-    color: green;
+.title{
+    font-size: 3.5rem;
+    position: absolute;
+    left: 50px;
+    color:whitesmoke;
+    width: 20px;
 }
 
-.redText{
+.greenText #playerScoreDisplay{
+    color: rgb(77, 216, 77);
+}
+
+.redText #computerScoreDisplay{
     color:#ca270a;
+}
+
+.player{
+    color: whitesmoke;
+    position: absolute;
+    top: 50px;
+    left: 450px;
+}
+.cpu{
+    color: whitesmoke;
+    position: absolute;
+    top: 50px;
+    right: 420px;
+}
+.winner{
+    color: whitesmoke;
+    position: absolute;
+    top: 20px;
+    left: 880px;
 }
