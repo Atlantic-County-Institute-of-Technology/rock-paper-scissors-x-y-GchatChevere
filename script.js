@@ -1,4 +1,4 @@
-const choices = ["rock","paper","scissors","printer","pencil"];
+const choices = ["rock","paper","scissors","water","notebook"];
 const playerDisplay = document.getElementById("P1");
 const computerDisplay = document.getElementById("P2");
 const resultDisplay = document.getElementById("winner");
@@ -9,10 +9,17 @@ let playerScore = 0;
 let computerScore = 0;
 
 
-// TODO: EventListeners for player choice
-// TODO: Function for cpu choice
+NewGame.addEventListener("click", () => {
+    clear()
+})
 
-
+function clear(){
+    playerScoreDisplay.textContent = "0";
+    computerScoreDisplay.textContent = "0";
+    playerDisplay.textContent = ""; 
+    computerDisplay.textContent = ""; 
+    resultDisplay.textContent = "";
+ }
 
 function playgame(playerChoice) {
     const cpuChoice = choices[Math.floor(Math.random() * 5 )]
@@ -24,32 +31,23 @@ function playgame(playerChoice) {
     else{
         switch(playerChoice){
             case "rock":
-               result = (cpuChoice === "scissors") ? "You Win!" : "You Lose!"
+               result = (cpuChoice === "scissors" || cpuChoice === "notebook") ? "You Win!" : "You Lose!"
                 break;
             case "paper":
-               result = (cpuChoice === "rock") ? "You Win!" : "You Lose!"
+               result = (cpuChoice === "rock" || cpuChoice === "water") ? "You Win!" : "You Lose!"
                 break;
             case "scissors":
-                result = (cpuChoice === "paper") ? "You Win!" : "You Lose!"
+                result = (cpuChoice === "paper" || cpuChoice === "notebook") ? "You Win!" : "You Lose!"
                 break;
-            case "printer":
-                result = (cpuChoice === "paper"|| cpuChoice === "pencil") ? "You Win!" : "You Lose!"
+            case "water":
+                result = (cpuChoice === "rock"|| cpuChoice === "scissors") ? "You Win!" : "You Lose!"
                 break;
-            case "pencil":
-                result = (cpuChoice === "paper"|| cpuChoice === "scissors") ? "You Win!" : "You Lose!"
+            case "notebook":
+                result = (cpuChoice === "paper"|| cpuChoice === "water") ? "You Win!" : "You Lose!"
                 break;
 
         }
     }
-
-    function NewGame(){
-       playerScore = 0;
-       computerScore = 0;
-       playerDisplay.textContent = 0; 
-       computerDisplay.textContent = 0; 
-    }
-
-
 
     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
     computerDisplay.textContent = `computer: ${cpuChoice}`;
@@ -69,27 +67,4 @@ function playgame(playerChoice) {
             break;
     }
 
-
 }
-
-
-
-/*function cpuChoice() {
-    return Math.floor(Math.random() * 5)
-}*/
-
-
-
-
-
-
-// function checkScore(){
-//     if (playerPick == 1){
-//         alert("you did it")   
-//     alert("You Did it!")
-// }
-
-
-
-// }
-

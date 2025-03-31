@@ -1,4 +1,4 @@
-
+/* default settings*/
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,8 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.2rem;
 }
-
+/* default settings*/
+/*background CSS*/
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
     background-image: linear-gradient(-60deg, rgb(32, 32, 32) 50%, rgb(241, 241, 241) 50%);
@@ -39,7 +40,8 @@ body{
         transform:translateX(25%);
     }
   }
-  
+  /*background CSS*/
+
 .Container{
     margin: 0 auto;
     display: flex;
@@ -50,7 +52,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+/*Rock paper scissors title*/
 .title{
 position: absolute;
 top: 0px;
@@ -58,8 +60,9 @@ font-style: oblique;
 font-variant: small-caps;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
+/*Rock paper scissors title*/
 
-
+/*New game button at the bottom*/
 .NewGame{
     right: 540px;
     border-radius: 0%;
@@ -74,7 +77,8 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     width: fit-content;
     margin-top: 30px;
 }
-
+/*New game button at the bottom*/
+/*Button container*/
 .choices{
     position:relative;
     top: 160px;
@@ -85,7 +89,8 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     width: fit-content;
     left: 35px;
 }
-
+/*Button container*/
+/*Settings for buttons*/
 button{
     align-items: center;
     justify-content: center;
@@ -101,11 +106,12 @@ button{
 button:hover{
     background:linear-gradient(#ca270a, rgb(75, 60, 60)) ;
 }
+/*Settings for buttons*/
 
 .nonbuttons{
     box-shadow: 5px 5px 10px 2px;
 }
-
+/*images*/
 img{
     position: absolute;
     height: 100px;
@@ -129,7 +135,7 @@ img{
     position: absolute;
     rotate:90deg;
     top: 20px;
-    right: 534px;
+    right: 524px;
 }
 
 .Print{
@@ -144,7 +150,8 @@ img{
     top: 20px;
 right: 145px;
 }
-
+/*images*/
+/*Player,Winner and Cpu display*/
 .Players1{
     position: absolute;
     left: 400px;
@@ -188,7 +195,8 @@ right: 145px;
     border: 1px solid black;
     border-radius: 50%;
 }
-
+/*Player,Winner and Cpu display*/
+/*Score displays*/
 .scoreDisplay2{
     position:absolute;
     top: 280px;
@@ -217,7 +225,8 @@ right: 145px;
     justify-content: center;
     display: flex;
 }
-
+/*Score displays*/
+/*title size and placement*/
 .title{
     font-size: 3.5rem;
     position: absolute;
@@ -225,6 +234,7 @@ right: 145px;
     color:whitesmoke;
     width: 20px;
 }
+/*title size and placement*/
 
 .greenText #playerScoreDisplay{
     color: rgb(77, 216, 77);
@@ -233,7 +243,7 @@ right: 145px;
 .redText #computerScoreDisplay{
     color:#ca270a;
 }
-
+/*other word placements*/
 .player{
     color: whitesmoke;
     position: absolute;
@@ -252,3 +262,4 @@ right: 145px;
     top: 20px;
     left: 880px;
 }
+/*other word placements*/
