@@ -8,6 +8,8 @@ const NewGame = document.getElementById("NewGame")
 let playerScore = 0;
 let computerScore = 0;
 
+let choice_icons = ["assets/download__1_-removebg-preview.png","assets/OIP__2_-removebg-preview (1).png","assets/OIP__2_-removebg-preview.png",
+"assets/OIP__4_-removebg-preview.png","assets/OIP__3_-removebg-preview.png"]
 
 NewGame.addEventListener("click", () => {
     clear()
@@ -49,10 +51,14 @@ function playgame(playerChoice) {
         }
     }
 
-    playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+    playerDisplay.textContent = img_array[choices.indexOf(playerChoice)];
     computerDisplay.textContent = `computer: ${cpuChoice}`;
     resultDisplay.textContent = result;
 
+    let img_array = new image();
+    img_array_src = choice_icons[player];
+    img_array.classList.add('img');
+    playerChoice.appendChild(img_array);
 
     switch(result){
         case "You Win!":

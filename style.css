@@ -1,7 +1,19 @@
 /* default settings*/
 * {
     margin: 0;
+    margin-bottom: -5px;
     padding: 0;
+}
+
+h1{
+    color: #ffffff;
+    text-shadow: 10px 3px 10px rgba(221, 215, 215, 0.3);
+}
+
+p{
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-shadow: 10px 3px 10px rgba(221, 215, 215, 0.3);
 }
 
 body{
